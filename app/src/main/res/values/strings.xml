@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">GroceryAppProject</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="address">Address</string>
+    <string name="mobile">"Mobile "</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="profile">Profile</string>
+    <string name="shop">Shop</string>
+    <string name="my_orders">My Orders</string>
+    <string name="logout">Logout</string>
+    <string name="username">Username</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
