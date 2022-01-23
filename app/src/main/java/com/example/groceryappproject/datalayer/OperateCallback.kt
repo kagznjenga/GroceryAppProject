@@ -2,6 +2,7 @@ package com.example.groceryappproject.datalayer
 
 import com.example.groceryappproject.datalayer.model.Category
 import com.example.groceryappproject.datalayer.model.Product
+import com.example.groceryappproject.datalayer.model.ProductDetails
 import com.example.groceryappproject.datalayer.model.Subcategory
 
 interface OperateCallback {
@@ -9,5 +10,6 @@ interface OperateCallback {
     fun onCategoriesSuccess(categories: List<Category>)
     fun onSubcategoriesSuccess(subcategories: List<Subcategory>)
     fun onProductsSuccess(products: List<Product>)
+    fun onDetailsSuccess(productDetails: ProductDetails)
     fun onError(message: String)
 }

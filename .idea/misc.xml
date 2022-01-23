@@ -12,13 +12,16 @@
         <entry key="..\:/Users/kagwi/AndroidStudioProjects/GroceryAppProject/app/src/main/res/drawable/ic_launcher_background.xml" value="0.15185185185185185" />
         <entry key="..\:/Users/kagwi/AndroidStudioProjects/GroceryAppProject/app/src/main/res/layout/activity_category_view_holder.xml" value="0.1" />
         <entry key="..\:/Users/kagwi/AndroidStudioProjects/GroceryAppProject/app/src/main/res/layout/activity_home.xml" value="0.264" />
-        <entry key="..\:/Users/kagwi/AndroidStudioProjects/GroceryAppProject/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/kagwi/AndroidStudioProjects/GroceryAppProject/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/kagwi/AndroidStudioProjects/GroceryAppProject/app/src/main/res/layout/activity_main.xml" value="0.253125" />
         <entry key="..\:/Users/kagwi/AndroidStudioProjects/GroceryAppProject/app/src/main/res/layout/activity_register.xml" value="0.264" />
+        <entry key="..\:/Users/kagwi/AndroidStudioProjects/GroceryAppProject/app/src/main/res/layout/fragment_product_details.xml" value="0.2" />
         <entry key="..\:/Users/kagwi/AndroidStudioProjects/GroceryAppProject/app/src/main/res/layout/fragment_products.xml" value="0.264" />
         <entry key="..\:/Users/kagwi/AndroidStudioProjects/GroceryAppProject/app/src/main/res/layout/fragment_subcategory.xml" value="0.253125" />
         <entry key="..\:/Users/kagwi/AndroidStudioProjects/GroceryAppProject/app/src/main/res/layout/navigation_header.xml" value="0.22916666666666666" />
         <entry key="..\:/Users/kagwi/AndroidStudioProjects/GroceryAppProject/app/src/main/res/layout/products_view_holder.xml" value="0.264" />
+        <entry key="..\:/Users/kagwi/AndroidStudioProjects/GroceryAppProject/app/src/main/res/layout/reviews_view_holder.xml" value="0.1" />
+        <entry key="..\:/Users/kagwi/AndroidStudioProjects/GroceryAppProject/app/src/main/res/layout/specifications_view_holder.xml" value="0.13451086956521738" />
         <entry key="..\:/Users/kagwi/AndroidStudioProjects/GroceryAppProject/app/src/main/res/layout/subcategory_view_holder.xml" value="0.14855072463768115" />
         <entry key="..\:/Users/kagwi/AndroidStudioProjects/GroceryAppProject/app/src/main/res/layout/view_holder_category.xml" value="0.12310030395136778" />
         <entry key="..\:/Users/kagwi/AndroidStudioProjects/GroceryAppProject/app/src/main/res/menu/navigation_menu.xml" value="0.25416666666666665" />

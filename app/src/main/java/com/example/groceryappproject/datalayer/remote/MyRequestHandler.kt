@@ -143,7 +143,7 @@ class MyRequestHandler(val context: Context) {
                 val message = "Failed"
                 operateCallback.onError(message)
             })
-        request.tag = "categories_request"
+        request.tag = "subcategories_request"
         queue.add(request)
     }
 
@@ -177,7 +177,41 @@ class MyRequestHandler(val context: Context) {
                 val message = "Failed"
                 operateCallback.onError(message)
             })
-        request.tag = "categories_request"
+        request.tag = "products_request"
+        queue.add(request)
+    }
+
+    fun loadProductDetails(productId: String, operateCallback: OperateCallback){
+        val endPoint = "product/details/$productId"
+        val url = "${Constants.BASE_URL}$endPoint"
+
+        val request = StringRequest(Request.Method.GET, url,
+            {
+                    apiResponse: String ->
+                val typeToken = object: TypeToken<ProductDetailsResponse>(){}
+                val myGson = Gson()
+
+                try {
+                    val dataResponse: ProductDetailsResponse = myGson.fromJson(apiResponse, typeToken.type)
+
+                    if (dataResponse.status == 0){
+                        val productDetails: ProductDetails = dataResponse.product
+                        operateCallback.onDetailsSuccess(productDetails)
+                    }
+                    else{
+                        Toast.makeText(context, "Failed to load categories. Please try again.", Toast.LENGTH_LONG).show()
+                    }
+                } catch (e: Exception){
+                    Toast.makeText(context, "Error found: ${e.message}", Toast.LENGTH_LONG).show()
+                }
+            },
+            {
+                    error: VolleyError ->
+                Toast.makeText(context, "Error found: ${error.message}", Toast.LENGTH_LONG).show()
+                val message = "Failed"
+                operateCallback.onError(message)
+            })
+        request.tag = "prod_details_request"
         queue.add(request)
     }
 }

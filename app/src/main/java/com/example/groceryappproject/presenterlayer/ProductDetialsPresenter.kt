@@ -7,12 +7,16 @@ import com.example.groceryappproject.datalayer.model.ProductDetails
 import com.example.groceryappproject.datalayer.model.Subcategory
 import com.example.groceryappproject.datalayer.remote.MyRequestHandler
 
-class ProductsPresenter(val myRequestHandler: MyRequestHandler, val productsView: ProductsMVP.ProductsViewInt):
-ProductsMVP.ProductsPresenterInt{
-    override fun displayProducts(subcategoryId: String) {
-        productsView.onLoad(true)
+class ProductDetialsPresenter(val myRequestHandler: MyRequestHandler, val detailsView: ProductDetailsMVP.ProductDetailsView):
+    ProductDetailsMVP.ProdDetailsPresenterInt {
+    override fun displayProdDetails(productId: String) {
+        detailsView.onLoad(true)
+        myRequestHandler.loadProductDetails(productId, object: OperateCallback{
+            override fun onDetailsSuccess(productDetails: ProductDetails) {
+                detailsView.onLoad(false)
+                detailsView.setResult(productDetails)
+            }
 
-        myRequestHandler.loadProducts(subcategoryId, object: OperateCallback{
             override fun onLoginRegisterSuccess(message: String) {
             }
 
@@ -23,19 +27,12 @@ ProductsMVP.ProductsPresenterInt{
             }
 
             override fun onProductsSuccess(products: List<Product>) {
-                productsView.onLoad(false)
-                productsView.setResult(products)
-            }
-
-            override fun onDetailsSuccess(productDetails: ProductDetails) {
-                TODO("Not yet implemented")
             }
 
             override fun onError(message: String) {
-                productsView.onLoad(false)
-                productsView.setResult(emptyList())
+                detailsView.onLoad(false)
+                detailsView.setResult(null)
             }
-
-        } )
+        })
     }
 }
